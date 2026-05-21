@@ -1,54 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/clLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".ActividadLogin">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="281dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="65dp"
+        android:id="@+id/imgLogoLogin"
+        android:layout_width="319dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="46dp"
+        android:contentDescription="@string/desc_logo_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvTituloLogin"
         android:layout_width="140dp"
         android:layout_height="37dp"
-        android:layout_marginTop="28dp"
-        android:text="Inicio de sesión"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:layout_marginTop="10dp"
+        android:text="@string/titulo_login"
+        android:textSize="@dimen/text_size_title"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogoLogin"
+        app:layout_constraintStart_toStartOf="@+id/imgLogoLogin"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoLogin" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCorreo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:hint="Correo electrónico"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:hint="@string/hint_correo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloLogin"
         app:startIconDrawable="@drawable/mail"
-        app:startIconTint="#F26411">
+        app:startIconTint="@color/orange_primary">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/texttilCorreo"
+            android:id="@+id/etCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
@@ -58,40 +56,41 @@
         android:id="@+id/tilClave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilCorreo"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#F26411"
+        app:passwordToggleTint="@color/orange_primary"
         app:startIconDrawable="@drawable/lock"
-        app:startIconTint="#F26411">
+        app:startIconTint="@color/orange_primary">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/texttilClave"
+            android:id="@+id/etClave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
+            android:hint="@string/hint_contrasena"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnIniciarSesion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Entrar"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:text="@string/btn_entrar"
+        android:textSize="@dimen/text_size_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilClave" />
 
-
     <LinearLayout
+        android:id="@+id/llRedesSociales"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -99,48 +98,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnGoogle"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
+            android:layout_width="@dimen/social_button_size"
+            android:layout_height="@dimen/social_button_size"
+            android:layout_margin="@dimen/margin_small"
             android:backgroundTint="@color/white"
+            android:contentDescription="@string/login_google"
             app:icon="@drawable/ic_google"
             app:iconGravity="textStart"
             app:iconPadding="0dp"
-            app:iconSize="32dp"
+            app:iconSize="@dimen/social_icon_size"
             app:iconTint="@null"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoogle1"
+            android:id="@+id/btnFacebook"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
+            android:layout_width="@dimen/social_button_size"
+            android:layout_height="@dimen/social_button_size"
+            android:layout_margin="@dimen/margin_small"
             android:backgroundTint="@color/white"
+            android:contentDescription="@string/login_facebook"
             app:icon="@drawable/ic_facebook"
             app:iconGravity="textStart"
             app:iconPadding="0dp"
-            app:iconSize="32dp"
+            app:iconSize="@dimen/social_icon_size"
             app:iconTint="@null"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoogle2"
+            android:id="@+id/btnGithub"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
+            android:layout_width="@dimen/social_button_size"
+            android:layout_height="@dimen/social_button_size"
+            android:layout_margin="@dimen/margin_small"
             android:backgroundTint="@color/white"
+            android:contentDescription="@string/login_github"
             app:icon="@drawable/ic_github"
             app:iconGravity="textStart"
             app:iconPadding="0dp"
-            app:iconSize="32dp"
+            app:iconSize="@dimen/social_icon_size"
             app:iconTint="@null"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">App1</string>
+    <!-- Activity Inicio -->
+    <string name="copyright_text">Copyright 2026</string>
+    <string name="bienvenida_uteq">Bienvenido a la UTEQ!</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="desc_logo_uteq">Logo de la UTEQ</string>
+
+    <!-- Activity Login -->
+    <string name="titulo_login">Inicio de sesión</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="hint_contrasena">Contraseña</string>
+    <string name="desc_logo_login">Logo de inicio de sesión</string>
+    <string name="login_google">Iniciar sesión con Google</string>
+    <string name="login_facebook">Iniciar sesión con Facebook</string>
+    <string name="login_github">Iniciar sesión con GitHub</string>
+
+    <!-- Activity Registro -->
+    <string name="titulo_registro">Registro de Usuario</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_apellido">Apellido</string>
+    <string name="desc_perfil_usuario">Foto de perfil de usuario</string>
 </resources>

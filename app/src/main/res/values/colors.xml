@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="orange_primary">#F26411</color>
+    <color name="orange_accent">#F4630E</color>
 </resources>

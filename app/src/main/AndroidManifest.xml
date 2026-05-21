@@ -12,16 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App1">
         <activity
-            android:name=".MainActivity3"
-            android:exported="false" />
-
-        <activity
-            android:name=".MainActivity2"
+            android:name=".ActividadDatos"
             android:exported="false" />
         <activity
-
-
-            android:name=".MainActivity"
+            android:name=".ActividadRegistro"
+            android:exported="false" />
+        <activity
+            android:name=".ActividadLogin"
+            android:exported="false" />
+        <activity
+            android:name=".ActividadInicio"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
